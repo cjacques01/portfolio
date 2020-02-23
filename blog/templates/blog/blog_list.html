@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="blog-list-section">
+  <div class="container blog-list-container">
+    {% for blog in blog_list %}
+        <div class="card mb-3 blog-list-card" style="max-width: 650px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="{{ blog.image.url }}" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{blog.title}}</h5>
+                <p class="card-text">{{blog.pub_date_pretty}} | {{blog.summary}}</p>
+                <a class="btn" href="{% url 'blog:detail' blog.id %}">Continue Reading</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+    <div class="pagination">
+      <div class="step-links">
+          {% if page_obj.has_previous %}
+              <a href="?page=1">&laquo; first</a>
+              <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+          {% endif %}
+
+          <span class="current">
+              Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+          </span>
+
+          {% if page_obj.has_next %}
+              <a href="?page={{ page_obj.next_page_number }}">next</a>
+              <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

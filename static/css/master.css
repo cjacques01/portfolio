@@ -1,0 +1,202 @@
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+}
+
+main {
+  padding-bottom: 60px;
+  background-color: #212121;
+  color: #e0e0e0;
+}
+
+h2 {
+  padding: 20px;
+}
+
+.section {
+  text-align: center;
+  min-height: 200px;
+  color: #e0e0e0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer {
+  position: absolute;
+  font-family: 'Julius Sans One', sans-serif;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  color: #e0e0e0;
+}
+
+.underline {
+  border-bottom: 1px solid #496ccb;
+}
+
+.rightline {
+  border-right: 1px solid #496ccb;
+}
+
+.btn {
+  background-color: #496ccb;
+  color: #e0e0e0;
+}
+/******HERO****************/
+.hero {
+  margin: 0;
+  background-image: url('../images/roberto-nickson-DauE-Q425nU-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+section ul {
+  padding: 0;
+}
+section li {
+  list-style: none;
+  text-align: left;
+  border-left: 1px solid #496ccb;
+  padding-left: 10px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+  section li {
+    text-align: right;
+    border-right: 1px solid #496ccb;
+    padding-right: 10px;
+    border-left: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hero {
+    height: 500px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .hero {
+    height: 700px;
+  }
+}
+
+/***** INDEX SECTION *****/
+
+#portfolio-section, #blog-section {
+  background: #39243c;
+}
+
+
+/***** FORM *******/
+form {
+  text-align: left;
+}
+
+/***** BUTTON *****/
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #e0e0e0; /* Set a background color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#topBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*****************NAVBAR***************************/
+
+.navbar-brand {
+  font-family: 'Julius Sans One', sans-serif;
+  padding-right: 20px;
+}
+
+/*****************ABOUT***************************/
+.experience-column {
+  width: 225px;
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.personal-details {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  max-width: 725px;
+  margin: auto;
+}
+
+/*****************PORTFOLIO***********************/
+#portfolioCarousel {
+  max-width: 550px;
+  margin: auto;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/*****************CONTACT******************/
+
+iframe {
+  width: 90%;
+}
+
+/***********BLOG SECTION***************/
+.card-body {
+    color: black;
+}
+.posts-button {
+  margin-top: 20px;
+}
+/***********BLOG LIST *****************/
+
+.blog-list-section, .blog-detail-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.step-links {
+  text-align: center;
+  margin: auto;
+}
+
+.blog-list-card {
+  margin: auto;
+}
+
+.blog-detail-section {
+  color: #e0e0e0;
+}

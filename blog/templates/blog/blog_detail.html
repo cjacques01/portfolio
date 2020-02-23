@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+  <section class="blog-detail-section">
+    <div class="container blog-detail-container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{{blog.image.url}}" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6">
+          <h2>{{blog.title}}</h2>
+          <p>{{blog.pub_date_pretty}}</p>
+          <p>{{blog.body}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
